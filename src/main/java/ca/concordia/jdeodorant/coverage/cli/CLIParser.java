@@ -30,7 +30,7 @@ public class CLIParser {
 		private String sourceDirectories;
 
 		@Parameter(names = "-format", description = "Report format for unit test result which can be either XML or CSV")
-		private ReportFormat reportFormat = ReportFormat.XML;
+		private ReportFormat reportFormat = ReportFormat.CSV;
 	}
 
 	public CLIParser(String[] args) {
