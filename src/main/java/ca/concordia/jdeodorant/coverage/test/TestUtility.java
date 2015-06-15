@@ -1,4 +1,4 @@
-package ca.concordia.jdeodorant.coverage.tools;
+package ca.concordia.jdeodorant.coverage.test;
 
 import java.io.File;
 import java.io.UnsupportedEncodingException;

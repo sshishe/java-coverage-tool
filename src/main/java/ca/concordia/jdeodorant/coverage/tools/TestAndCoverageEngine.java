@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
 import org.junit.runner.JUnitCore;
 
 import ca.concordia.jdeodorant.coverage.cli.CLIParser;
-import ca.concordia.jdeodorant.coverage.report.AntXmlRunListener;
-import ca.concordia.jdeodorant.coverage.report.CSVRunListener;
+import ca.concordia.jdeodorant.coverage.test.AntXmlRunListener;
+import ca.concordia.jdeodorant.coverage.test.CSVRunListener;
 import static org.junit.extensions.cpsuite.SuiteType.*;
 
 @RunWith(ClasspathSuite.class)
