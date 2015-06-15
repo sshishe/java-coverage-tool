@@ -20,7 +20,7 @@
  * org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter class
  * from Ant verson 1.7.1.
  */
-package ca.concordia.jdeodorant.coverage.report;
+package ca.concordia.jdeodorant.coverage.test;
 
 import org.junit.runner.Description;
 import org.junit.runner.Result;

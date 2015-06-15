@@ -1,5 +1,6 @@
-package ca.concordia.jdeodorant.coverage.report;
+package ca.concordia.jdeodorant.coverage.test;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
@@ -20,6 +21,7 @@ public class CSVRunListener extends RunListener {
 	private static final String COMMA_DELIMITER = ",";
 	private static final String NEW_LINE_SEPARATOR = "\n";
 	private static final String GLOBAL_CSV_FILE_NAME = "test_report.csv";
+	private static final String AFTER_TEST_CSV_FILE_NAME = "test_report_offset.csv";
 	private Map<Description, String> testFinishedList;
 	private Map<Description, String> testFailuresList;
 	private Map<Description, String> testIgnoredList;
@@ -64,9 +66,15 @@ public class CSVRunListener extends RunListener {
 	@Override
 	public void testRunStarted(Description description) throws Exception {
 		logger.info("Test Run Started");
-		logger.info(reportDirectory + "/" + GLOBAL_CSV_FILE_NAME);
-		fileWriter = new FileWriter(reportDirectory + "/"
-				+ GLOBAL_CSV_FILE_NAME);
+
+		String csvFileName = reportDirectory + "/" + GLOBAL_CSV_FILE_NAME;
+		File f = new File(csvFileName);
+
+		if (f.exists() && !f.isDirectory())
+			csvFileName = reportDirectory + "/" + AFTER_TEST_CSV_FILE_NAME;
+
+		logger.info(csvFileName);
+		fileWriter = new FileWriter(csvFileName);
 		fileWriter.append(CSV_FILE_HEADER.toString());
 		fileWriter.append(NEW_LINE_SEPARATOR);
 	}

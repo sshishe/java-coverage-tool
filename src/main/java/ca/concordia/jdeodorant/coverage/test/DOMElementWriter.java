@@ -16,7 +16,7 @@
  *
  */
 
-package ca.concordia.jdeodorant.coverage.report;
+package ca.concordia.jdeodorant.coverage.test;
 
 import java.io.IOException;
 import java.io.OutputStream;

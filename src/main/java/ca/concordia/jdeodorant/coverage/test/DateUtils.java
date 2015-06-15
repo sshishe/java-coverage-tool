@@ -15,7 +15,7 @@
  *  limitations under the License.
  *
  */
-package ca.concordia.jdeodorant.coverage.report;
+package ca.concordia.jdeodorant.coverage.test;
 
 import java.text.ChoiceFormat;
 import java.text.DateFormat;
