@@ -2,10 +2,9 @@ package ca.concordia.jdeodorant.coverage.report;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Set;
 
 import org.junit.runner.Description;
 import org.junit.runner.Result;
@@ -29,9 +28,9 @@ public class CSVRunListener extends RunListener {
 
 	public CSVRunListener(String reportDirectory) {
 		this.reportDirectory = reportDirectory;
-		testFinishedList = new HashMap<Description, String>();
-		testFailuresList = new HashMap<Description, String>();
-		testIgnoredList = new HashMap<Description, String>();
+		testFinishedList = new LinkedHashMap<Description, String>();
+		testFailuresList = new LinkedHashMap<Description, String>();
+		testIgnoredList = new LinkedHashMap<Description, String>();
 	}
 
 	@Override
