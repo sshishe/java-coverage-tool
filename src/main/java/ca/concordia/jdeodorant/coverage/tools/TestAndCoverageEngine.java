@@ -17,6 +17,7 @@ import static org.junit.extensions.cpsuite.SuiteType.*;
 @RunWith(ClasspathSuite.class)
 @SuiteTypes({ JUNIT38_TEST_CLASSES, TEST_CLASSES, RUN_WITH_CLASSES })
 // @IncludeJars(true)
+@ClassnameFilters("!ca.concordia.jdeodorant.coverage.tools.TestAndCoverageEngine")
 public class TestAndCoverageEngine {
 	public static void run(String[] args) {
 		CLIParser cliParser = new CLIParser(args);
